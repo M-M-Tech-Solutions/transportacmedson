@@ -23,7 +23,19 @@ const routes = [
             layout: "AppLayoutDefault",
             title: "Home"
         }
-  }
+    },
+    {
+        name: "caminhoes",
+        path: "/cadastros/caminhoes",
+        components: {
+            default: () => import("@/pages/caminhoes.vue"),
+        },
+        meta: {
+            requiresAuth: true,
+            layout: "AppLayoutDefault",
+            title: "Caminhões"
+        }
+    }
 
 ]
 

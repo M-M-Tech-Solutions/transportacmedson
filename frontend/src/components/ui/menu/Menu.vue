@@ -43,12 +43,14 @@
 
                     <SidebarMenuSubItem  v-for="item in cadastroModule" :key="item.title">
 
-                      <SidebarMenuButton class="cursor-pointer text-white hover:text-white text-md active:text-white">
-                        <a :href="item.url" class="flex gap-2 items-center">
-                          <component :is="item.icon" class="w-4 h-4" />
-                          <span>{{ item.title }}</span>
-                        </a>
-                      </SidebarMenuButton>
+                      <RouterLink :to="item.url">
+                        <SidebarMenuButton class="cursor-pointer text-white hover:text-white text-md active:text-white">
+                          <a class="flex gap-2 items-center">
+                            <component :is="item.icon" class="w-4 h-4" />
+                            <span>{{ item.title }}</span>
+                          </a>
+                        </SidebarMenuButton>
+                      </RouterLink>
                     </SidebarMenuSubItem>
 
                   </SidebarMenuSub>
@@ -116,7 +118,7 @@ const cadastroModule = [
   },
   {
     title: "Caminhões",
-    url: "#",
+    url: "/cadastros/caminhoes",
     icon: Truck,
   },
 ]
