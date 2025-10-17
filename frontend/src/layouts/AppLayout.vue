@@ -1,6 +1,6 @@
 <template>
     <component :is="layout">
-        <router-view name="menu"/>
+        <!-- <router-view name="Menu"/> -->
         <router-view/>
     </component>
 </template>
@@ -15,13 +15,14 @@ const route = useRoute();
 
 const loadLayout = async (layoutName: any) => {
     if (!layoutName) return AppLayoutDefault;
-    
+    console.log(layoutName)
     if (layoutName === "AppLayoutWithoutStyles") {
         const { default: component } = await import(`../layouts/${layoutName}.vue`);
         return component;
     }
     
     const { default: component } = await import(`../layouts/${layoutName}.vue`);
+    console.log(component)
     return component;
 };
 

@@ -14,12 +14,28 @@ const routes = [
     {
         name: "home",
         path: "/",
-        component: home,
+        components: {
+            default: home,
+            // Menu: () => import("@/components/ui/menu/Menu.vue")
+        },
         meta: {
             requiresAuth: true,
-            Layout: "AppLayoutDefault"
+            layout: "AppLayoutDefault",
+            title: "Home"
         }
-  }
+    },
+    {
+        name: "caminhoes",
+        path: "/cadastros/caminhoes",
+        components: {
+            default: () => import("@/pages/caminhoes.vue"),
+        },
+        meta: {
+            requiresAuth: true,
+            layout: "AppLayoutDefault",
+            title: "Caminhões"
+        }
+    }
 
 ]
 
