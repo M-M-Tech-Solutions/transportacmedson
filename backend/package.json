@@ -1,0 +1,33 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "dev:ts-node": "ts-node ./src/server.ts",
+    "dev:tsx": "tsx watch --env-file .env src/server.ts",
+    "dev:native": "node --watch ./src/server.ts",
+    "migrate": "ts-node ./src/db/migrate.ts",
+    "seed": "ts-node ./src/db/seed.ts",
+    "seed:rollback": "ts-node ./src/db/rollback_seeds.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.8.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.2"
+  }
+}
