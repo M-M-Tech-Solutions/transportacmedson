@@ -5,7 +5,7 @@
         :is-show-footer="true"
     >
         <template #body>
-            <form id="mainForm" ref="mainForm" @submit.prevent="submitForm(method)" class="flex flex-col gap-y-4">
+            <form id="mainForm" ref="mainForm" @submit.prevent="submitForm($event)" class="flex flex-col gap-y-4">
 
             </form>
     
@@ -45,10 +45,10 @@ const open = defineModel<boolean>('open')
 const emit = defineEmits(["close"])
 
 const mainForm = ref(null)
-const props = defineProps<Props>()
+defineProps<Props>()
 
-const submitForm = (method) => {
-    console.log("teste")
+const submitForm = (method: any) => {
+    console.log("teste", method)
 }
 
 </script>
