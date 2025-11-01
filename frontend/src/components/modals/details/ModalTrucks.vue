@@ -51,7 +51,7 @@ import ModalScrollBody from '@/components/ModalScrollBody.vue';
 import LabelValidation from '@/components/LabelValidation.vue';
 import DatePicker from '@/components/DatePicker.vue';
 import { useVuelidate } from '@vuelidate/core';
-import { Edit, Save, Eraser } from "lucide-vue-next";
+import { Save, Eraser } from "lucide-vue-next";
 import { reactive, ref, watch } from 'vue';
 
 const user = reactive({

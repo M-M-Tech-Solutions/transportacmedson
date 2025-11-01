@@ -10,7 +10,7 @@
        />
 
         <DynamicTable :columns="columns" :items="items" :enableTooltip="true">
-            <template #actions="{ row }">
+            <template #actions>
                 <DropDownActions :is-excluir="true" @detalhar="console.log('teste')" />
             </template>
         </DynamicTable>
